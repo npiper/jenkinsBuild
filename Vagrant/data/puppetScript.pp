@@ -4,4 +4,12 @@ node 'ubuntu1310-i386' {
     }   
 
   include jenkins
+
+  jenkins::plugin {
+  "git" : ;
+  "radiatorviewplugin" : ;
+  "jira" : ;
+  "confluencepublisher" : ;
+  "jenkins-cloudformation-plugin" : ;
+  }  
 }
