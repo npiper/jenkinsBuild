@@ -1,25 +1,18 @@
 node 'ubuntu1310-i386' {
 
-include git
-include git::subtree
-
-git::config { 'user.name':
-    value => 'Neil Piper',
-}
-
-git::config { 'user.email':
-  value => 'n_piper@hotmail.com',
-}
-
 include jenkins 
 
 jenkins::plugin { 
-	'git': ;
-        'github': ;
+        'scm-api': ;
         'confluence-publisher': ;
         'jira': ;
         'radiatorviewplugin': ;
         'chucknorris' : ;
+}
+
+jenkins::plugin {
+  'git': ;
+  'github': ;
 }
 
  # defaults for all maven{} declarations
