@@ -4,7 +4,7 @@ Jenkins Install
 
 GIT
 Java (OpenJDK)
-Maven
+Maven - MVN_HOME = /opt/apache-maven-3.2.2
 
 * Configuration
 
