@@ -2,18 +2,18 @@ node 'ubuntu1310-i386' {
 
 include jenkins 
 
-jenkins::plugin { 
-        'scm-api': ;
-        'confluence-publisher': ;
-        'jira': ;
-        'radiatorviewplugin': ;
-        'chucknorris' : ;
-}
+#jenkins::plugin { 
+#        'scm-api': ;
+#        'confluence-publisher': ;
+#        'jira': ;
+#        'radiatorviewplugin': ;
+#        'chucknorris' : ;
+#}
 
-jenkins::plugin {
-  'git': ;
-  'github': ;
-}
+#jenkins::plugin {
+#  'git': ;
+#  'github': ;
+#}
 
  # defaults for all maven{} declarations
 Maven {
@@ -24,7 +24,7 @@ Maven {
 
  # Install Maven
 class { "maven::maven":
-  version => "3.0.5", # version to install
+  version => "3.2.2", # version to install
   # you can get Maven tarball from a Maven repository instead than from Apache servers, optionally with a user/password
   repo => {
     #url => "http://repo.maven.apache.org/maven2",
