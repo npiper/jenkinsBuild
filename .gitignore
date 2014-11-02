@@ -20,7 +20,7 @@
 *.tar
 *.zip
 *.box
- 
+*.vagrant 
 # Logs and databases #
 ######################
 *.log
