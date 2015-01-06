@@ -1,8 +1,16 @@
-Jenkins Install
+An Automated Jenkins Install
+
+GOAL:
+Automate the provisioning and installation of a jenkins instance with all required plugins, and pre-requisites using the goal of 'one-click' deployment and provisioning.
+
+Technologies used:
+* Vagrant
+* Puppet
+
 
 * What is the build based on?
 
-An Ubuntu 1310 (386) Server install with base puppet.
+An Ubuntu 1310 (386) Server install with base puppet is used as the base box / VM image.
 
 ubuntu-1310-i386-virtualbox-puppet.box
 
