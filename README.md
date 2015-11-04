@@ -4,9 +4,18 @@ GOAL:
 Automate the provisioning and installation of a jenkins instance with all required plugins, and pre-requisites using the goal of 'one-click' deployment and provisioning.
 
 Technologies used:
-* Vagrant
+* Vagrant 
 * Puppet
 
+* What do I need to build it locally?
+
+
+* Vagrant install (tested on version 1.7+)
+* Oracle VirtualBox
+
+The build process has been tested on the following setups:
+* a MacOSX system in AWS EC2.
+* a Windows 
 
 * What is the build based on?
 
@@ -16,7 +25,13 @@ ubuntu-1310-i386-virtualbox-puppet.box
 
 URL: http://puppet-vagrant-boxes.puppetlabs.com/ubuntu-1310-i386-virtualbox-puppet.box
 
-* Pre-Requisite installs
+To add to your local install:
+
+>vagrant box add --name ubuntu-1310-i386-virtualbox-puppet.box http://puppet-vagrant-boxes.puppetlabs.com/ubuntu-1310-i386-virtualbox-puppet.box
+
+
+
+* Pre-Requisite installs (Ubuntu)
 GIT
 Java (OpenJDK) = /usr/lib/jvm/java-1.7.0-openjdk-i386
 Maven - MVN_HOME = /opt/apache-maven-3.2.2
