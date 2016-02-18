@@ -10,7 +10,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # please see the online documentation at vagrantup.com.
 
   # Every Vagrant virtual environment requires a box to build off of.
-  config.vm.box = "ubuntu-1310-i386-virtualbox-puppet.box"
+  config.vm.box = "ubuntu-14.04.box"
+
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -30,8 +31,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Bridged networks make the machine appear as another physical device on
   # your network.
   config.vm.network "public_network"
-
-  #config.vm.network :public_network, :bridge => 'en0: Wi-Fi (AirPort)'
 
   # If true, then any SSH connections made will enable agent forwarding.
   # Default value: false
@@ -57,6 +56,10 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   #
   # View the documentation for the provider you're using for more
   # information on available options.
+
+  # Provision with shell script
+  config.vm.provision :shell, path: "installJenkins.sh"
+
 
   # Enable provisioning with CFEngine. CFEngine Community packages are
   # automatically installed. For example, configure the host as a
